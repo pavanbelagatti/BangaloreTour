@@ -1,16 +1,16 @@
----
 kind: pipeline
 type: docker
 name: hello-world
 
 steps:
-- name: docker
- image: plugins/docker
- settings:
-   repo:pavansa/BangaloreTour
-   username:
-     from_secret: docker_username
-   password:
-     from_secret: docker_password
-   tags:
-     - latest
+- name: docker  
+  image: plugins/docker
+  settings:
+    # registry: docker.io
+    repo: pavansa/bangaloretour
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    tags: 
+      - latest

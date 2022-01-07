@@ -3,14 +3,6 @@ type: docker
 name: hello-world
 
 steps:
-- name: test
-  image: golang
-  commands:
-  - go mod init
-  - go get
-  - go test
-
-steps:
 - name: docker  
   image: plugins/docker
   settings:
